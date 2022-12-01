@@ -37,51 +37,10 @@ aside > .links-aside > ul > li:hover,
 }
  
 
-.title-card-music-1 > .card-music-1 > .card:hover {
+.title-card-music-1 > .card-music-1 > .card:hover,
+.title-card-music-2 > .card-music-2 > .card:hover {
     cursor: pointer;
     opacity: 0.5;
-}
-
-.card {
-    position: relative;
-}
-/*
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 60px;
-    right: 0;
-    left: 25px;
-}
-.overlay > div > img {
-    display: none;
-}
-.card:hover > .overlay > div > img {
-    display: block;
-}
-.overlay {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
-.overlay > div {
-    border: 3px solid white;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    border-radius: 50%;
-    padding: 4px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-.overlay > div > i {
-    font-size: 50px;
 }
 
 
@@ -222,10 +181,13 @@ main > .title-card-music-1 {
     padding-left: 10px;
     font-size: 24px;
 }
+
 .card-music-1 {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
+    padding: 0px 10px;
     margin-top: 2em;
 }
 .card-music-1 > .card {
@@ -234,7 +196,7 @@ main > .title-card-music-1 {
     width: 16%;
 }
 .card-music-1 > .card > img {
-    width: 90%;
+    width: 100%;
 }
 .card-music-1 > .card > h3 {
     margin-top: 6px;
@@ -256,7 +218,7 @@ main > .title-card-music-1 {
 
 .title-card-music-2 {
     margin-top: 2em;
-    width: 34%;
+    width: 60%;
 }
 .title-card-music-2 > h3 {
     font-size: 24px;
@@ -272,14 +234,15 @@ main > .title-card-music-1 {
 .card-music-2 {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    gap: 20px;
+    padding-left: 10px;
 }
 .card-music-2 > .card {
     text-align: center;
-    width: 46%;
+    width: 25%;
 }
 .card-music-2 > .card > img {
-    width: 89%;
+    width: 100%;
 }
 .card-music-2 > .card > h3 {
     margin-top: 6px;
@@ -293,6 +256,9 @@ main > .title-card-music-1 {
 }
 .card-music-3 > img {
     border-radius: 100%;
+}
+.title-card-music-3 {
+    margin-bottom: 70px;
 }
 
 
@@ -356,24 +322,24 @@ footer {
 /* RESPONSIVE - MEDIA QUERY */
 @media screen and (max-width: 1100px) {
     .card-music-1 > .card {
-        width: 25%;
+        width: 20%;
     }
     .title-card-music-2 {
         width: 50%;
     }
     .card-music-2 > .card {
-        width: 50%;
+        width: 40%;
     }
 }
 
 @media screen and (max-width: 700px) {
     .card-music-1 > .card {
-        width: 50%;
+        width: 40%;
     }
     .title-card-music-2 {
         width: 100%;
     }
     .card-music-2 > .card {
-        width: 50%;
+        width: 38%;
     }
 }
