@@ -10,18 +10,82 @@
 
 .container-general {
     display: flex;
+    height: calc(100vh - 80px);
 }
 .aside {
     border: 1px solid black;
-    width: 15%;
+    width: 250px;
 }
 .header-main {
     border: 1px solid black;
-    width: 85%;
+    width: calc(100% - 250px);
 }
 header {
     border: 1px solid black;
 }
+
+
+/* REGOLE HOVER */ 
+
+aside > .links-aside > ul > li:hover,
+.links-aside > ul > li > a:hover,
+.playlist > ul > li:hover,
+.john > span:hover,
+.links-main > ul > li > a:hover {
+    cursor: pointer;
+    color: white;
+}
+ 
+
+.title-card-music-1 > .card-music-1 > .card:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.card {
+    position: relative;
+}
+/*
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 60px;
+    right: 0;
+    left: 25px;
+}
+.overlay > div > img {
+    display: none;
+}
+.card:hover > .overlay > div > img {
+    display: block;
+}
+.overlay {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.overlay > div {
+    border: 3px solid white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.overlay > div > i {
+    font-size: 50px;
+}
+
+
+
 
 /* HEADER */
 header {
@@ -35,31 +99,31 @@ header {
 header > button {
     color: white;
     background-color: #080b12;
-    border: 1px dashed white;
+    border: 1px solid white;
     border-radius: 20px;
     padding: 10px;
     text-transform: uppercase;
     font-size: 10px;
-    width: 15%;
 }
 
 
 /* ASIDE */
+aside > .playlist-john {
+    display: flex;
+    height: calc(100vh - 290px);
+}
 .aside {
     background-color: black;
     color: white;
 }
 .logo {
-    width: 80%;
-    border: 1px solid white;
-    padding-top: 5px;
-    padding-left: 8px;
+    width: 60%;
+    padding-left: 10px;
+    padding-top: 14px;
 }
 
 .links-aside {
-    border: 1px solid white;
-    width: 100%;
-    margin-top: 1.5em;
+    margin-top: 1em;
     padding-left: 10px;
 }
 .links-aside > ul {
@@ -67,31 +131,54 @@ header > button {
 }
 .links-aside > ul > li {
     padding-top: 10px;
+    color: #555555;
+}
+.links-aside > ul > li > i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.links-aside > ul > li > a {
+    text-decoration: none;
+    color: #555555;
+}
+
+.links-aside > ul > li:first-child > a {
+    color: #d2d2d2;
+}
+.links-aside > ul > li:first-child {
+    color: #d2d2d2;
 }
 
 .playlist-john {
-    width: 100%;
-    border: 1px solid white;
     margin-top: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80vh;
     padding-left: 10px;
 }
 
 .playlist-john > .playlist, .john {
     width: 90%;
-    border: 1px solid white;
 }
 .playlist > ul > li {
-    padding-top: 10px;
-    font-size: 12px;
+    padding-top: 14px;
+    font-size: 14px;
+    color: #55595f;
+}
+.playlist > ul > li > i {
+    background-color: #a3a3a3;
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 20px;
 }
 
 .john > hr {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.john > span {
+    color: #646464;
 }
 
 
@@ -100,8 +187,12 @@ header > button {
 /* MAIN */
 main {
     overflow: auto;
-    background-color: #141922;
+    height: 100%;
     color: white;
+}
+.header-main {
+    background-color: #141922;
+    height: 100%;
 }
 main > .links-main {
     margin-top: 1em;
@@ -120,25 +211,30 @@ main > .links-main > ul > li > a {
     font-size: 13px;
     color: #717378;
 }
+
+
+/* regole card 1 */
+
 main > .title-card-music-1 {
     margin-top: 2em;
 }
 .title-card-music-1 > h3 {
-    padding-left: 6px;
+    padding-left: 10px;
     font-size: 24px;
 }
-
 .card-music-1 {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
     margin-top: 2em;
 }
 .card-music-1 > .card {
     text-align: center;
     font-size: 13px;
+    width: 16%;
 }
 .card-music-1 > .card > img {
-    width: 95%;
+    width: 90%;
 }
 .card-music-1 > .card > h3 {
     margin-top: 6px;
@@ -148,35 +244,136 @@ main > .title-card-music-1 {
     margin-top: 5px;
 }
 
+/* fine regole card 1 */
 
+
+.card > h3 {
+    font-size: 15px;
+}
+
+
+/* regole card 2 */
 
 .title-card-music-2 {
     margin-top: 2em;
-    width: 33%;
-    border: 1px dashed black;
+    width: 34%;
 }
 .title-card-music-2 > h3 {
     font-size: 24px;
-    padding-left: 6px;
+    padding-left: 10px;
 }
 .title-card-music-2 > p {
     margin-top: 10px;
     margin-bottom: 10px;
     color: #55595f;
     font-size: 12px;
-    padding-left: 6px;
+    padding-left: 10px;
 }
 .card-music-2 {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .card-music-2 > .card {
-    border: 1px solid black;
     text-align: center;
+    width: 46%;
 }
 .card-music-2 > .card > img {
-    width: 95%;
+    width: 89%;
+}
+.card-music-2 > .card > h3 {
+    margin-top: 6px;
+}
+
+
+/* regole card 3 */
+
+.card-music-3 > img {
+    border-radius: 100%;
+}
+.card-music-3 > img {
+    border-radius: 100%;
 }
 
 
 /* FOOTER */
+footer {
+    height: 80px;
+    background-color: #282828;
+    position: relative;
+    z-index: 30;
+}
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-footer > div {
+    border-right: 1px solid white;
+}
+.container-footer > .left-footer {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 20%;
+}
 
+
+.left-footer > .img-left-footer {
+    height: 50px;
+    width: 50px;
+    background-image: url('../img/sinister.jpeg');
+    background-size: contain;
+    background-position: center;
+}
+.txt-img-left-footer {
+    margin-left: 10px;
+}
+.txt-img-left-footer > p {
+    font-size: 12px;
+    color: white;
+}
+.txt-img-left-footer > p:last-child {
+    color: gray;
+}
+
+
+.folder-heart-left-footer {
+    margin-left: 20px;
+    display: flex;
+    font-size: 20px;
+    color: gray;
+    margin-left: 15%;
+}
+.folder-heart-left-footer > i {
+    padding-right: 10px;
+}
+
+
+
+
+/* RESPONSIVE - MEDIA QUERY */
+@media screen and (max-width: 1100px) {
+    .card-music-1 > .card {
+        width: 25%;
+    }
+    .title-card-music-2 {
+        width: 50%;
+    }
+    .card-music-2 > .card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card-music-1 > .card {
+        width: 50%;
+    }
+    .title-card-music-2 {
+        width: 100%;
+    }
+    .card-music-2 > .card {
+        width: 50%;
+    }
+}
